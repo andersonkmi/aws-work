@@ -25,7 +25,7 @@ def lambda_handler(event, context):
         ec2_waiter = ec2_client.get_waiter('instance_running')
         
         # Start the EC2 instance
-        response = ec2_client.start_instances(InstanceIds=[instance_id])
+        ec2_client.start_instances(InstanceIds=[instance_id])
 
         # Wait until the instance is running
         logger.info(f"Waiting for instance {instance_id} to enter 'running' state.")
