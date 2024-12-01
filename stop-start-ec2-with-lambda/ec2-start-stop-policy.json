@@ -14,7 +14,10 @@
             "Effect": "Allow",
             "Action": [
                 "ec2:Start*",
-                "ec2:Stop*"
+                "ec2:Stop*",
+                "ec2:AssociateAddress",
+                "ec2:DescribeAddresses",
+                "ec2:DescribeInstances"
             ],
             "Resource": "*"
         }
